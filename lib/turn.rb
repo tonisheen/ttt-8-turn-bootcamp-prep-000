@@ -19,9 +19,13 @@ def move(board, index, player='X')
 end
 
 def turn(board)
-  puts "Please enter 1-9:"
-  index = input_to_index(gets)
-  if valid_move?(board, index)
-    move(board, index)
+  valid = FALSE
+  until valid do
+    puts "Please enter 1-9:"
+    index = input_to_index(gets)
+    if valid_move?(board, index)
+      move(board, index)
+      valid = TRUE
+    end
   end
 end
