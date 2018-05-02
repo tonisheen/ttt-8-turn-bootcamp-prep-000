@@ -13,3 +13,5 @@ end
 def valid_move?(board, index)
   !(board[index] == 'X' || board[index] == 'O') && index >= 0 && index < 9
 end
+
+def move
