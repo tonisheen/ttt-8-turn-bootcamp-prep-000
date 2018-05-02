@@ -10,6 +10,6 @@ def input_to_index(input)
   (input.to_i - 1)
 end
 
-def valid_move?(index)
-  TRUE
+def valid_move?(board, index)
+  !(board[index] == 'X' && board[index] == 'O' && index < 0 && index > 9)
 end
